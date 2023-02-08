@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-// In this example we don't have an reference to a specific DOM element. We can have also a reference to (for example) a number of renders.
+// In this example we don't have an reference to a specific DOM element. We can have also a reference (for example) to a number of renders.
 function UseRefPreviousState() {
   const [name, setName] = useState("");
 
@@ -9,7 +9,9 @@ function UseRefPreviousState() {
 
   // This useEffect will run on 'name' state change (every time when we change a input value).
   useEffect(() => {
+    // increasing number of renders (state change triggers component re-render)
     renders.current = renders.current + 1;
+    // we change a previous current value to the previous name state
     previous.current = name;
   }, [name]);
 
