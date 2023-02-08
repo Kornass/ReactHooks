@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import UseRef01 from "./components/UseRef01";
+import UseRefPreviousState from "./components/UseRefPreviousState";
+import UseMemo from "./components/UseMemo";
+import UseCallback from "./components/UseCallback";
+import UseCallback1 from "./components/UseCallBack1";
+import CustomuseFetch from "./components/CustomuseFetch";
+import CustomUseLocalStorage from "./components/CustomUseLocalStorage";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <UseRef01 /> */}
+      {/* <UseRefPreviousState /> */}
+      {/* <UseMemo /> */}
+      {/* <UseCallback /> */}
+      {/* <UseCallback1 /> */}
+      {/* <CustomuseFetch /> */}
+      {/* <CustomUseLocalStorage /> */}
     </div>
   );
 }
 
 export default App;
+
+// UseRef
+// Allows you to create a reference to a DOM element in funcitonal component
