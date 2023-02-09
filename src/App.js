@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       {/* <UseRef01 /> */}
       {/* <UseRefPreviousState /> */}
-      <UseContext />
+      {/* <UseContext /> */}
       {/* <UseMemo /> */}
-      {/* <UseCallback /> */}
+      <UseCallback />
       {/* <UseCallback1 /> */}
       {/* <CustomuseFetch /> */}
       {/* <CustomUseLocalStorage /> */}

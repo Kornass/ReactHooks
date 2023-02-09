@@ -1,4 +1,4 @@
-// Memorization- optimization technique that seepds up performance by storing or catching the results of an expensive function(take a lot of resources) call when the same inputs occur, when it has same arguments
+// Memoization- optimization technique that seepds up performance by storing or catching the results of an expensive function(take a lot of resources) call when the same inputs occur, when it has same arguments
 // UseMemo Hook - It takes a function and an array of dependencies as arguments, and returns a Memoized Value which recalculates only when one of the dependencies gets changed. If no array is provided, a new value will be computed on every render.
 
 import { useMemo, useState } from "react";
