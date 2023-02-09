@@ -1,4 +1,4 @@
-import useLocalStorage from "../CustomHooks/useLocalStorage"; // whatever into state in localstorage
+import useLocalStorage from "./useLocalStorage"; // whatever into state in localstorage
 function CustomUseLocalStorage() {
   const [task, setTask] = useLocalStorage("task", "");
   // Array case

@@ -1,16 +1,15 @@
 import React, { useState, useCallback } from "react";
 
-import { memo } from "react";
-
-const App = () => {
+const UseCallback1 = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
 
   const increment = () => {
-    setCount((c) => c + 1);
+    setCount((prevState) => prevState + 1);
   };
+  // useCallback will memoize addTodo function, so after calling increment() function (what cause component rerender) it won't define and execute addTodo() function --> Todos component props are not going to change --> Todos component won't be composed and rendered again (it got memoized)
   const addTodo = useCallback(() => {
-    setTodos((t) => [...t, "New Todo"]);
+    setTodos((prevState) => [...prevState, "New Todo"]);
   }, [todos]);
 
   return (
@@ -24,8 +23,9 @@ const App = () => {
     </>
   );
 };
-// Todos component re-render even if it not used (in case we click incrementing button)- It's because we change the count state, so it make the whole app.js rerendering. It is happening even if we use memo. It's because something called referential equality. Every time component rerenders our addTodo function is getting recreated. We can prevent it with usecallback
+// 'Todos' component re-render even if it not used (in case we click incrementing button)- It's because we change the count state, so it make the whole app.js rerendering. It is happening even if we use memo. It's because something called referential equality ([] === [] --> false). Every time component rerenders our addTodo function is getting recreated. We can prevent it with usecallback
 const Todos = React.memo(({ todos, addTodo }) => {
+  // This console.log() will run only if we add new Todo in UseCallback1 component
   console.log("child render");
   return (
     <>
@@ -38,4 +38,4 @@ const Todos = React.memo(({ todos, addTodo }) => {
   );
 });
 
-export default App;
+export default UseCallback1;
