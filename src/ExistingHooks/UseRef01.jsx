@@ -1,7 +1,5 @@
 import { useRef } from "react";
 
-//  Sometimes we can have a situation that you want to use a element or its value without connecting it to any state.
-
 function UseRef01() {
   // creating a reference:
   const inputRef = useRef();
@@ -23,11 +21,27 @@ function UseRef01() {
     paraRef.current.innerText = "Goodbye";
   };
   return (
-    <div>
+    <div className="container flex flex-col justify-center items-center w-2/3">
+      <div className="mb-3">
+        <h1 className="text-3xl">UseRef</h1>
+        <p className="bg-orange-100 border rounded p-2">
+          The useRef Hook is a function that returns a mutable ref object whose
+          .current property is initialized with the passed argument
+          (initialValue). The returned object will persist for the full lifetime
+          of the component.
+        </p>
+        <p className="bg-orange-100 border rounded p-2">
+          Sometimes we can have a situation that you want to use a element or
+          its value without connecting it to any state.
+        </p>
+      </div>
       <form onSubmit={onSubmit}>
         <label htmlFor="name">Name</label>
-        <input type="text" ref={inputRef} className="form-control mb-2" />
-        <button type="submit" className="btn btn-primary">
+        <input type="text" ref={inputRef} className="form-control my-2" />
+        <button
+          type="submit"
+          className="bg-gray-200 hover:bg-purple-200 border border-black rounded px-2 py-1 "
+        >
           Submit
         </button>
         <p ref={paraRef}>Hello</p>

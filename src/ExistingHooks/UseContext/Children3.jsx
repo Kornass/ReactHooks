@@ -8,7 +8,12 @@ function Children3() {
   const dataFromParent = useContext(myContext);
   return (
     <div>
-      <p>{dataFromParent.name}</p>
+      <p>
+        <span className="bg-green-100 rounded p-1 mr-2">
+          Data received in 3rd child:
+        </span>
+        {dataFromParent.name}
+      </p>
     </div>
   );
 }

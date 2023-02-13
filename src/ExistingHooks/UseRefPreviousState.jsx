@@ -16,12 +16,17 @@ function UseRefPreviousState() {
   }, [name]);
 
   return (
-    <div>
-      <h1>Renders: {renders.current}</h1>
-      <h2>Previous state: {previous.current}</h2>
+    <div className="container flex flex-col justify-between items-center w-2/3">
+      <h1 className="text-3xl">UseRef</h1>
+      <p className="bg-orange-100 border rounded p-2">
+        In this example we create a reference to a number of renders and to
+        previous name state (collected in input)
+      </p>
+      <p>Renders: {renders.current}</p>
+      <p className="mt-2">Previous state: {previous.current}</p>
       <input
         type="text"
-        className="form-control mb-3"
+        className="form-control mt-3"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />

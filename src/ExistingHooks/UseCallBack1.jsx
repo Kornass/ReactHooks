@@ -13,14 +13,21 @@ const UseCallback1 = () => {
   }, [todos]);
 
   return (
-    <>
+    <div className="container flex flex-col justify-center items-center w-2/3">
+      <h1 className="text-3xl">UseCallback</h1>
       <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>
         Count: {count}
-        <button onClick={increment}>+</button>
+        <br />
+        <button
+          className="border bg-gray-200 rounded px-4 my-2"
+          onClick={increment}
+        >
+          +
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 // 'Todos' component re-render even if it not used (in case we click incrementing button)- It's because we change the count state, so it make the whole app.js rerendering. It is happening even if we use memo. It's because something called referential equality ([] === [] --> false). Every time component rerenders our addTodo function is getting recreated. We can prevent it with usecallback
@@ -33,7 +40,12 @@ const Todos = React.memo(({ todos, addTodo }) => {
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
-      <button onClick={addTodo}>Add Todo</button>
+      <button
+        className="border bg-gray-200 rounded px-4 my-2"
+        onClick={addTodo}
+      >
+        Add Todo
+      </button>
     </>
   );
 });
