@@ -20,7 +20,10 @@ function UseParams() {
           also, how we specify params in our Router in App.js
         </p>
         {/* We can extract params from params object by accessing it like a normal object. We specify key names in our Router in App.js */}
-        <p>My params: {params.data}</p>
+        <p>
+          My params: <br />
+          <span className="italic">{params.data}</span>{" "}
+        </p>
       </div>
     </div>
   );

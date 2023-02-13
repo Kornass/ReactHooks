@@ -5,7 +5,7 @@ function UseNavigate() {
   // we extract navigate function from useNavigate hook:
   const navigate = useNavigate();
   const [person, setPerson] = useState({
-    name: "John",
+    name: "John from useNavigate",
     city: "Barcelona",
   });
   return (
