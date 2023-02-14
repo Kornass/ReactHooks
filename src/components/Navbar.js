@@ -27,7 +27,7 @@ function Navbar() {
         to="/navigate"
         className={` 
         link
-        ${location.pathname === "/navigate" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/navigate" && "bg-green-200"}
         `}
       >
         useNavigate
@@ -36,9 +36,7 @@ function Navbar() {
         to={`/params/${"from navigation"}`}
         className={` 
         link
-        ${
-          location.pathname.includes("/params") ? "bg-green-200" : "bg-gray-200"
-        }
+        ${location.pathname.includes("/params") && "bg-green-200"}
        `}
       >
         useParams
@@ -47,7 +45,7 @@ function Navbar() {
         to="/location"
         className={` 
         link
-        ${location.pathname === "/location" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/location" && "bg-green-200"}
         `}
       >
         useLocation
@@ -56,7 +54,7 @@ function Navbar() {
         to="/useref"
         className={`
         link
-        ${location.pathname === "/useref" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/useref" && "bg-green-200"}
        `}
       >
         useRef
@@ -65,7 +63,7 @@ function Navbar() {
         to="/userefstate"
         className={`
         link 
-        ${location.pathname === "/userefstate" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/userefstate" && "bg-green-200"}
       `}
       >
         useRefPrevState
@@ -74,7 +72,7 @@ function Navbar() {
         to="/context"
         className={`
         link 
-        ${location.pathname === "/context" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/context" && "bg-green-200"}
        `}
       >
         useContext
@@ -83,7 +81,7 @@ function Navbar() {
         to="/memo"
         className={`
         link  
-        ${location.pathname === "/memo" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/memo" && "bg-green-200"}
       `}
       >
         useMemo
@@ -92,7 +90,7 @@ function Navbar() {
         to="/callback"
         className={`
         link
-        ${location.pathname === "/callback" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/callback" && "bg-green-200"}
         
         `}
       >
@@ -102,9 +100,7 @@ function Navbar() {
         to="/callbacktodo"
         className={`
         link
-        ${
-          location.pathname === "/callbacktodo" ? "bg-green-200" : "bg-gray-200"
-        }
+        ${location.pathname === "/callbacktodo" && "bg-green-200"}
         `}
       >
         useCallback1
@@ -113,7 +109,7 @@ function Navbar() {
         to="/reducer"
         className={`
         link
-        ${location.pathname === "/reducer" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/reducer" && "bg-green-200"}
      `}
       >
         useReducer
@@ -122,7 +118,7 @@ function Navbar() {
         to="/fetch"
         className={`
         link
-        ${location.pathname === "/fetch" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/fetch" && "bg-green-200"}
     `}
       >
         Custom useFetch
@@ -131,7 +127,7 @@ function Navbar() {
         to="/storage"
         className={`
         link 
-        ${location.pathname === "/storage" ? "bg-green-200" : "bg-gray-200"}
+        ${location.pathname === "/storage" && "bg-green-200"}
      `}
       >
         Custom useLocalStorage

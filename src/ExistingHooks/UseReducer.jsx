@@ -1,11 +1,12 @@
 import { useReducer, useEffect, useRef } from "react";
 import graph from "../assets/useReducerHook.jpg";
 
+// state object
 const initialState = {
   isRunning: false,
   time: 0,
 };
-
+// Reducer function that takes current state and action as arguments. Depends on what action we pass in, we destructure existing state and we change parameters inside state object
 function reducer(state, action) {
   switch (action.type) {
     case "start":
@@ -22,18 +23,23 @@ function reducer(state, action) {
 }
 
 function UseReducer() {
+  // we extract current state and dispatch function from useReducer hook
   const [state, dispatch] = useReducer(reducer, initialState);
   const idRef = useRef(0);
 
   useEffect(() => {
+    // if isRunning is false we stop running timer
     if (!state.isRunning) {
       return;
     }
+    // We call dispatch with action 'tick' every second
     idRef.current = setInterval(() => dispatch({ type: "tick" }), 1000);
+    // cleanup function for every tick
     return () => {
       clearInterval(idRef.current);
       idRef.current = 0;
     };
+    // we run this function on change our isRunning state property
   }, [state.isRunning]);
 
   return (
@@ -78,6 +84,7 @@ function UseReducer() {
           new state value
         </p>
       </div>
+      {/* We call dispatch function and pass action object depending on which button we clicked */}
       <div className="stopwatch">
         {state.time}s
         <div>

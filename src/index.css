@@ -7,7 +7,7 @@
     @apply bg-orange-100 border rounded p-2 text-sm my-4;
   }
   .link {
-    @apply hover:bg-gray-100
+    @apply bg-gray-200 hover:bg-gray-100
     hover:text-black 
     text-gray-800 
     py-2 px-3 
