@@ -16,9 +16,9 @@ function UseRefPreviousState() {
   }, [name]);
 
   return (
-    <div className="container flex flex-col justify-between items-center w-2/3">
+    <div className="container">
       <h1 className="text-3xl">UseRef</h1>
-      <p className="bg-orange-100 border rounded p-2">
+      <p className="textSection">
         In this example we create a reference to a number of renders and to
         previous name state (collected in input)
       </p>

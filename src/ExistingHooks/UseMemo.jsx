@@ -12,9 +12,9 @@ const ExampleUseMemo = () => {
   // expensiveValue from computeExpensiveValue Function With useMemo()
 
   return (
-    <div className="container flex flex-col justify-center items-center w-2/3">
+    <div className="container">
       <h1 className="text-3xl">UseMemo</h1>
-      <p className="bg-orange-100 border rounded p-2">
+      <p className="textSection">
         Memoization- optimization technique that seepds up performance by
         storing or catching the results of an expensive function(take a lot of
         resources) call when the same inputs occur, when it has same arguments
@@ -23,29 +23,29 @@ const ExampleUseMemo = () => {
         of the dependencies gets changed. If no array is provided, a new value
         will be computed on every render.
       </p>
-      <p className="bg-red-100 border rounded p-2 text-sm">
+      <p className="textSection bg-red-100 text-xs">
         Don't worry if page rendering takes some time - there is a expensive
         function running on initial render and every time we change counter1
       </p>
       <div className="mt-3">
         <h2>Counter 1: {counter1}</h2>
         <button
-          className="border bg-gray-200 rounded px-4 my-2"
+          className="button py-0 "
           onClick={() => setCounter1(counter1 + 1)}
         >
           +
         </button>
       </div>
-      <div>
+      <div className="mt-3">
         <h2>Counter 2: {counter2}</h2>
         <button
-          className="border bg-gray-200 rounded px-4 my-2"
+          className="button py-0 "
           onClick={() => setCounter2(counter2 + 1)}
         >
           +
         </button>
       </div>
-      <div>
+      <div className="mt-3">
         <h2>Expensive Value:</h2>
         {expensiveValue}
       </div>

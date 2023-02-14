@@ -15,14 +15,14 @@ function UseContext() {
 
   return (
     <myContext.Provider value={data}>
-      <div className="container flex flex-col justify-between items-center w-2/3">
+      <div className="container">
         <h1 className="text-3xl">UseContext</h1>
-        <p className="bg-orange-100 border rounded p-2">
+        <p className="textSection">
           useContext is a React Hook that lets you read and subscribe to context
           from your component. React context provides data to components no
           matter how deep they are in the components tree. The context is used
           to manage global data, e.g. global state, theme, services, user
-          settings, and more. // Context APIs enable us to define the context
+          settings, and more. Context APIs enable us to define the context
           Object which stores some data and will make it available throughout
           the hierarchy without passing the data as props.
         </p>

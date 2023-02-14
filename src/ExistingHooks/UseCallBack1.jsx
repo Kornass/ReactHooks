@@ -13,17 +13,14 @@ const UseCallback1 = () => {
   }, [todos]);
 
   return (
-    <div className="container flex flex-col justify-center items-center w-2/3">
-      <h1 className="text-3xl">UseCallback</h1>
+    <div className="container">
+      <h1 className="text-3xl mb-3">UseCallback</h1>
       <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>
         Count: {count}
         <br />
-        <button
-          className="border bg-gray-200 rounded px-4 my-2"
-          onClick={increment}
-        >
+        <button className="button" onClick={increment}>
           +
         </button>
       </div>
@@ -40,10 +37,7 @@ const Todos = React.memo(({ todos, addTodo }) => {
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
-      <button
-        className="border bg-gray-200 rounded px-4 my-2"
-        onClick={addTodo}
-      >
+      <button className="button" onClick={addTodo}>
         Add Todo
       </button>
     </>

@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  text-align: center;
-  margin-top: 35px;
-}
-
-p {
-  margin-top: 15px;
-  font-size: large;
+@layer components {
+  .textSection {
+    @apply bg-orange-100 border rounded p-2 text-sm my-4;
+  }
+  .link {
+    @apply hover:bg-gray-100
+    hover:text-black 
+    text-gray-800 
+    py-2 px-3 
+    rounded-lg
+    my-2
+    ml-3
+    shadow-md
+    active:bg-purple-100;
+  }
+  .container {
+    @apply text-center mt-8 flex flex-col justify-center items-center w-2/3;
+  }
+  .button {
+    @apply bg-gray-200 hover:bg-purple-200 border border-black rounded-lg px-3 py-1 my-2;
+  }
 }

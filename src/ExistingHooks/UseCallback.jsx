@@ -21,9 +21,9 @@ const UseCallback = () => {
     [countTwo]
   );
   return (
-    <div className="container flex flex-col justify-center items-center w-2/3">
+    <div className="container">
       <h1 className="text-3xl">UseCallback</h1>
-      <p className="bg-orange-100 border rounded p-2">
+      <p className="textSection">
         Memoization recap - When a complex function stores its output so the
         next time it is called with the same input. It’s similar to caching, but
         on a more local level. It can skip any complex computations and return
@@ -39,7 +39,7 @@ const UseCallback = () => {
       <Button handleClick={memoizedSetCountOne} name="button1" />
       <p>Count two: {countTwo} </p>
       <Button handleClick={memoizedSetCountTwo} name="button2" />
-      <p className="bg-orange-100 border rounded p-2">
+      <p className="textSection mb-2">
         Why to use that? When React re-renders your component, it also recreates
         the functions you’ve declared inside your component. When React
         re-renders your component, it will see any functions that are declared
@@ -48,7 +48,7 @@ const UseCallback = () => {
         performance. But the other times when you don’t want the function to be
         seen as a new function, you can rely on useCallback to help you out.
       </p>
-      <ul className="bg-orange-100 border rounded p-4 list-disc">
+      <ul className="textSection w-full ">
         Cases for UseCallback:
         <li>
           You’re passing the function to another component that is also memoized
@@ -65,7 +65,7 @@ const Button = React.memo(({ handleClick, name }) => {
   console.log(`${name} rendered`);
 
   return (
-    <button className="btn btn-primary mt-1" onClick={handleClick}>
+    <button className="button" onClick={handleClick}>
       {name}
     </button>
   );

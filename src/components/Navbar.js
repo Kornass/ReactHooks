@@ -17,137 +17,83 @@ function Navbar() {
       <NavLink
         to="/"
         className={`
+        link
         ${location.pathname === "/" ? "bg-green-200" : "bg-blue-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+       `}
       >
         Home
       </NavLink>
       <NavLink
         to="/navigate"
         className={` 
+        link
         ${location.pathname === "/navigate" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+        `}
       >
         useNavigate
       </NavLink>
       <NavLink
         to={`/params/${"from navigation"}`}
         className={` 
+        link
         ${
           location.pathname.includes("/params") ? "bg-green-200" : "bg-gray-200"
         }
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+       `}
       >
         useParams
       </NavLink>
       <NavLink
         to="/location"
         className={` 
+        link
         ${location.pathname === "/location" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+        `}
       >
         useLocation
       </NavLink>
       <NavLink
         to="/useref"
         className={`
+        link
         ${location.pathname === "/useref" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+       `}
       >
         useRef
       </NavLink>
       <NavLink
         to="/userefstate"
-        className={` 
+        className={`
+        link 
         ${location.pathname === "/userefstate" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+      `}
       >
         useRefPrevState
       </NavLink>
       <NavLink
         to="/context"
-        className={` 
+        className={`
+        link 
         ${location.pathname === "/context" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+       `}
       >
         useContext
       </NavLink>
       <NavLink
         to="/memo"
-        className={`  
+        className={`
+        link  
         ${location.pathname === "/memo" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+      `}
       >
         useMemo
       </NavLink>
       <NavLink
         to="/callback"
         className={`
+        link
         ${location.pathname === "/callback" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100
+        
         `}
       >
         useCallback
@@ -155,62 +101,38 @@ function Navbar() {
       <NavLink
         to="/callbacktodo"
         className={`
+        link
         ${
           location.pathname === "/callbacktodo" ? "bg-green-200" : "bg-gray-200"
         }
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+        `}
       >
         useCallback1
       </NavLink>
       <NavLink
         to="/reducer"
         className={`
+        link
         ${location.pathname === "/reducer" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        my-2
-        ml-3
-        active:bg-purple-100`}
+     `}
       >
         useReducer
       </NavLink>
       <NavLink
         to="/fetch"
         className={`
+        link
         ${location.pathname === "/fetch" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+    `}
       >
         Custom useFetch
       </NavLink>
       <NavLink
         to="/storage"
-        className={` 
+        className={`
+        link 
         ${location.pathname === "/storage" ? "bg-green-200" : "bg-gray-200"}
-        hover:bg-gray-100
-        hover:text-black 
-        text-gray-800 
-        py-1.5 px-3 
-        rounded shadow
-        ml-3
-        my-2
-        active:bg-purple-100`}
+     `}
       >
         Custom useLocalStorage
       </NavLink>
