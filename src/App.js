@@ -12,6 +12,8 @@ import UseNavigate from "./ExistingHooks/UseNavigate";
 import UseParams from "./ExistingHooks/UseParams";
 import UseReducer from "./ExistingHooks/UseReducer";
 import UseLocation from "./ExistingHooks/UseLocation";
+import CustomusePrevious from "./CustomHooks/usePrevious/CustomusePrevious";
+import Packages from "./components/Packages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         {/* We specify a params in our URL. Whatever will be passed it will be accessible in params object under 'data' property */}
         <Route path="/params/:data" element={<UseParams />} />
         <Route path="/location" element={<UseLocation />} />
+        <Route path="/previous" element={<CustomusePrevious />} />
+        <Route path="/packages" element={<Packages />} />
       </Routes>
     </Router>
   );

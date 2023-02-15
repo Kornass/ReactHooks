@@ -115,6 +115,15 @@ function Navbar() {
         useReducer
       </NavLink>
       <NavLink
+        to="/previous"
+        className={`
+        link
+        ${location.pathname === "/previous" && "bg-green-200"}
+     `}
+      >
+        Custom usePrevious
+      </NavLink>
+      <NavLink
         to="/fetch"
         className={`
         link
@@ -131,6 +140,16 @@ function Navbar() {
      `}
       >
         Custom useLocalStorage
+      </NavLink>
+      <NavLink
+        to="/packages"
+        className={`
+        link 
+        ${location.pathname === "/packages" && "bg-green-200"}
+        bg-amber-100
+     `}
+      >
+        Packages
       </NavLink>
     </nav>
   );
