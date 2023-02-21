@@ -15,10 +15,22 @@ import UseLocation from "./ExistingHooks/UseLocation";
 import CustomusePrevious from "./CustomHooks/usePrevious/CustomusePrevious";
 import Packages from "./components/Packages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Helmet from "react-helmet";
 
 function App() {
   return (
     <Router>
+      <Helmet>
+        <title>ReactHook Library</title>
+        <meta
+          name="description"
+          content="Example implementation of different React.js hooks"
+        />
+        <meta
+          name="keywords"
+          content="react hooks, react, hooks, library, react hooks examples "
+        />
+      </Helmet>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
