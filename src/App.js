@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Helmet>
-        <title>ReactHook Library</title>
+        <title>ReactHooks Library</title>
         <meta
           name="description"
           content="Example implementation of different React.js hooks"
